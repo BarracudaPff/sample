@@ -16,7 +16,7 @@ internal class Ex1String {
         val s3 = """
             |hello
             |world
-            |""".trimMargin()
+            """.trimMargin()
 
         println(s1)
         println("-------")
@@ -28,7 +28,7 @@ internal class Ex1String {
     @Test
     fun stringIsImmutable() {
         val s = "hello"
-        // s[1] = "w";
+        //s[1] = "w";
         val s2 = s.replace("he", "qwer")
 
         println(s)
@@ -84,7 +84,10 @@ internal class Ex1String {
 
         val b = StringBuilder()
         for (i in 1..10000)
-            b.append("i=").append(i).append('\n')
+            b
+                .append("i=")
+                .append(i)
+                .append('\n')
         val s = b.toString()
         println(s.length)
     }
@@ -116,6 +119,7 @@ internal class Ex1String {
     fun stringMethods() {
         val s:String = "Hello world";
         println(s.length)
+        println(s.substring(1 .. 5))
         println(s.startsWith("Hello"))
         println(s.startsWith("hello", true))
         println(s.indexOf("world"))
