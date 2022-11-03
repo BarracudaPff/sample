@@ -36,6 +36,8 @@ class Ex1Test {
     }
 
     // Задание 3 - Добавьте метод area в Figure, переопределите его в Rectangle и Square
+    // Реализуйте метод areaDiff(a, b), который возвращает разность площадей фигур
+
     @Test
     fun polymorphism() {
         /*val r: Figure = Rectangle(10, 20)
@@ -43,6 +45,7 @@ class Ex1Test {
         assertTrue { r is Figure }
         assertFalse { r is Square }
         assertEquals(r.area(), 200)
-        assertEquals(s.area(), 100)*/
+        assertEquals(s.area(), 100)
+        assertEquals(areaDiff(r, a), 100)*/
     }
 }
