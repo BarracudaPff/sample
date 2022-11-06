@@ -11,6 +11,7 @@ version = "1.0-SNAPSHOT"
 repositories { mavenCentral() }
 
 dependencies {
+    implementation("org.jetbrains.kotlin:kotlin-reflect:1.7.10")
     testImplementation(
         kotlin(
             "test"
