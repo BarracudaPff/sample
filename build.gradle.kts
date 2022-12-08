@@ -15,6 +15,7 @@ val jUnitJupiterVersion = "5.9.0"
 
 dependencies {
     implementation("org.jetbrains.kotlin:kotlin-reflect:1.7.10")
+    implementation("com.fasterxml.jackson.core:jackson-databind:2.14.1")
     testImplementation(kotlin("test"))
     testImplementation(kotlin("test-junit5"))
 
