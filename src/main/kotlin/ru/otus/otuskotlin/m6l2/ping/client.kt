@@ -1,4 +1,4 @@
-package ru.otus.otuskotlin.m6l2.client
+package ru.otus.otuskotlin.m6l2.ping
 
 import java.io.BufferedReader
 import java.io.BufferedWriter

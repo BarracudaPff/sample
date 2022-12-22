@@ -1,8 +1,7 @@
-package ru.otus.otuskotlin.m6l2.server
+package ru.otus.otuskotlin.m6l2.ping
 
 import java.io.BufferedReader
 import java.io.BufferedWriter
-import java.io.IOException
 import java.io.InputStreamReader
 import java.io.OutputStreamWriter
 import java.net.ServerSocket
@@ -33,6 +32,6 @@ class PingServer(port: Int) : AutoCloseable {
 
 fun main() {
     PingServer(8090).use {
-        it.start();
+        it.start()
     }
 }
