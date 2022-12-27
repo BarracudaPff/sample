@@ -1,0 +1,27 @@
+* {
+    /*background-color: red;*/
+    border: 1px dashed #000;
+    padding: 10px;
+}
+
+h1,
+h2,
+h3 {
+    background-color: rgb(245, 187, 187);
+}
+
+span {
+    background-color: aqua;
+}
+
+.span_1 {
+    background-color: magenta;
+}
+
+h1.span_2 {
+    background-color: crimson;
+}
+
+.span_3 {
+    background-color: #222000;
+}
