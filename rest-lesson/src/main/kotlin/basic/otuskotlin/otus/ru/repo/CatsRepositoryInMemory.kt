@@ -8,8 +8,17 @@ import java.util.UUID
 /**
  * Реализация репозитория "в памяти", все данные сохраняются в кэше только на время работы приложения, не stateless
  */
-class CatsRepositoryInMemory: ICatsRepository {
+class CatsRepositoryInMemory(
+    initObjects: List<CatCardModel> = emptyList(),
+): ICatsRepository {
     private val cache: SortedMap<String, CatCardModel> = sortedMapOf()
+
+    init {
+        initObjects.forEach {
+            val id = it.id ?: UUID.randomUUID().toString()
+            cache[id] = it.copy(id = id, creationDt = Instant.now().toEpochMilli())
+        }
+    }
 
     override suspend fun create(cat: CatCardModel): CatCardModel {
         val cat2save = cat.copy(
