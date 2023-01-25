@@ -12,9 +12,15 @@ plugins {
 group = "org.example"
 version = "1.0-SNAPSHOT"
 
-repositories {
-    google()
-    mavenCentral()
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+        maven { url = uri("https://maven.pkg.jetbrains.space/kotlin/p/kotlin/kotlin-js-wrappers") }
+        maven { setUrl("https://dl.bintray.com/kotlin/kotlin-eap") }
+        maven { url = uri("https://repo.spring.io/milestone") }
+        maven { url = uri("https://jitpack.io") }
+
 //    maven("http://...")
 //    maven {
 //        url = uri("http://...")
@@ -24,6 +30,11 @@ repositories {
 //            password = System.getenv("ENV_PASS")
 //        }
 //    }
+    }
+
+    tasks.withType<KotlinCompile> {
+        kotlinOptions.jvmTarget = "11"
+    }
 }
 
 dependencies {
@@ -78,8 +89,4 @@ tasks {
     build {
         dependsOn("fatJar")
     }
-}
-
-tasks.withType<KotlinCompile> {
-    kotlinOptions.jvmTarget = "1.8"
 }
